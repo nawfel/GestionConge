@@ -1,0 +1,11 @@
+﻿namespace GestionConge.Application.Exceptions
+{
+    public class BadRequestException : Exception
+    {
+        public BadRequestException(string message) : base($"({message}) was not found")
+        {
+
+        }
+
+    }
+}
