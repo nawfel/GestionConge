@@ -1,6 +1,7 @@
 ﻿using Application.contracts.persistance;
 using AutoMapper;
 using Domain.entities;
+using GestionConge.Application.Contracts.Logging;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -10,14 +11,17 @@ using System.Threading.Tasks;
 
 namespace GestionConge.Application.features.leaveType.queries.GetAllLeaveTypes
 {
-    public class GetLeaveTypesHandler : IRequestHandler<GetLeaveTypeQuery, List<LeaveTypeDto>>
+    public class GetLeaveTypesQueryHandler : IRequestHandler<GetLeaveTypeQuery, List<LeaveTypeDto>>
     {
         private readonly IMapper _mapper;
         private readonly ILeaveTypeRepository _leaveTypeRepository;
-        public GetLeaveTypesHandler(IMapper mapper,ILeaveTypeRepository leaveTypeRepository)
+        private readonly IAppLogger<GetLeaveTypesQueryHandler> _logger;
+        public GetLeaveTypesQueryHandler(IMapper mapper,ILeaveTypeRepository leaveTypeRepository, IAppLogger<GetLeaveTypesQueryHandler> logger)
         {
             _mapper= mapper;
-            _leaveTypeRepository= leaveTypeRepository; 
+            _leaveTypeRepository= leaveTypeRepository;
+            _logger= logger;
+           
         }
         public async Task<List<LeaveTypeDto>> Handle(GetLeaveTypeQuery request, CancellationToken cancellationToken)
         {
@@ -26,6 +30,7 @@ namespace GestionConge.Application.features.leaveType.queries.GetAllLeaveTypes
             // convert data objects to dtos 
            var data = _mapper.Map<List<LeaveTypeDto>>(leaveTypes);
             // return list of dtos 
+            _logger.LogInformation("leave types where retrieved");
             return data;
 
         }
