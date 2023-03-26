@@ -17,6 +17,7 @@ namespace GestionConge.Persistance.Configurations
             builder.HasData(
              new LeaveType
              {
+                 Id=1,
                  Name = "Vacation",
                  DefaultDays = 10,
                  DateCreated = DateTime.Now,

@@ -27,7 +27,7 @@ namespace GestionConge.Application.features.leaveType.commands.createLeaveType
             // validate incoming data;
             var validator = new CreateLeaveTypeCommandValidator(_leaveTypeRepository);
             var validationResult = await validator.ValidateAsync(request);
-            if (validationResult.Errors.Any()) throw new BadRequestException("invalid leavetype",validationResult);
+            if (!validationResult.Errors.Any()) throw new BadRequestException("invalid leavetype",validationResult);
             // convert to domain entity object ;
             var leaveTypeToCreate = _mapper.Map<LeaveType>(request);
             // add to db

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using Domain.entities;
+using GestionConge.Application.features.leaveType.commands.createLeaveType;
+using GestionConge.Application.features.leaveType.commands.updateLeaveType;
 using GestionConge.Application.features.leaveType.queries.GetAllLeaveTypes;
 using GestionConge.Application.features.leaveType.queries.GetLeaveTypeDetails;
 using System;
@@ -16,6 +18,8 @@ namespace GestionConge.Application.automapper
         {
             CreateMap<LeaveTypeDto, LeaveType>().ReverseMap();
             CreateMap<LeaveType, LeaveTypeDetailsDto>();
+            CreateMap<CreateLeaveTypeCommand, LeaveType>();
+            CreateMap<UpdateLeaveTypeCommand, LeaveType>();
             
         }
     }
