@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestionConge.Persistance", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionConge.Instrastructure", "GestionConge.Instrastructure\GestionConge.Instrastructure.csproj", "{E9328104-B497-4D51-BCAD-33C0BAD3AE79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionConge.API", "GestionConge.API\GestionConge.API.csproj", "{F992B3FB-A5C0-4716-9170-2B3EB1C87363}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E9328104-B497-4D51-BCAD-33C0BAD3AE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9328104-B497-4D51-BCAD-33C0BAD3AE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9328104-B497-4D51-BCAD-33C0BAD3AE79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F992B3FB-A5C0-4716-9170-2B3EB1C87363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F992B3FB-A5C0-4716-9170-2B3EB1C87363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F992B3FB-A5C0-4716-9170-2B3EB1C87363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F992B3FB-A5C0-4716-9170-2B3EB1C87363}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{AE19FEC4-5191-44C6-9792-CF357194BD15} = {E22A7E62-3319-4CE4-81D6-6FD2009CA75C}
 		{7297B706-5A67-4E54-B125-E0431BC31BAA} = {C78C06CD-1A71-4C35-90E7-34904198DE0A}
 		{E9328104-B497-4D51-BCAD-33C0BAD3AE79} = {C78C06CD-1A71-4C35-90E7-34904198DE0A}
+		{F992B3FB-A5C0-4716-9170-2B3EB1C87363} = {FB94C270-5C0F-4EBC-991F-73A56C22D862}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE8F43AB-8E50-4116-A0BD-7F1D5971B47A}

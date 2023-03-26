@@ -20,7 +20,7 @@ namespace GestionConge.Application.features.leaveType.commands.updateLeaveType
         private readonly IAppLogger<UpdateLeaveTypeCommandHandler> _logger;
         public UpdateLeaveTypeCommandHandler( IMapper mapper, ILeaveTypeRepository leaveRequestRepository, IAppLogger<UpdateLeaveTypeCommandHandler> logger)
         {
-            _logger=logger
+            _logger = logger;
             _mapper= mapper;
             _leaveTypeRepository = leaveRequestRepository;
         }

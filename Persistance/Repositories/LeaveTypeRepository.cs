@@ -17,7 +17,7 @@ namespace GestionConge.Persistance.Repositories
 
         public async Task<bool> IsLeaveTypeUnique(string name)
         {
-            return await context.LeaveTypes.AnyAsync(p=>p.Name == name);
+            return await context.LeaveTypes.AnyAsync(p=>p.Name == name)==true;
         }
     }
 
